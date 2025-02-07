@@ -17,14 +17,16 @@ Golang
 🚀 Getting Started
 
 1️⃣ Clone the repository
-
+```bash
 git clone [ https://github.com/your-repo.git](https://github.com/AWS-INTERN-CAKAP/posts_api_golang.git)
 cd post_api_golang
+```
 
 2️⃣ Environment Configuration
 
 Create a .env file in the root directory and add the following:
 
+```bash
 # Environment
 ENV=dev
 
@@ -40,37 +42,43 @@ POSTGRES_DATABASE=postgres
 
 # JWT Secret Key
 JWT_SECRET_KEY=your-secret-key
+```
 
 3️⃣ Running with Docker
 
 To start the application using Docker Compose, run:
 
+```bash
 docker-compose up --build -d
-
+```
 This will start the application and the PostgreSQL database.
 
 4️⃣ Running Locally (Without Docker)
 
 If you want to run the application without Docker, follow these steps:
 
+``bash
 go mod tidy
 go run ./cmd/main.go
+``
 
 🛠️ Project Structure
-
+```bash
 ├── build
-│   ├── Dockerfile    # Dockerfile for app container
-├── cmd               # Application entry point
-├── config            # Configuration files
-├── internal          # Core business logic
-│   ├── http          # HTTP handlers
-│   ├── middleware    # Middleware logic
-│   ├── entity        # Database models
-│   ├── repository    # Database queries
-│   ├── services      # Business logic layer
-├── pkg               # Utility packages
-├── .env              # Environment variables
+│   ├── Dockerfile     # Dockerfile for app container
+├── cmd                # Application entry point
+├── config             # Configuration files
+├── database/migration # Migration files
+├── internal           # Core business logic
+│   ├── http           # HTTP handlers
+│   ├── middleware     # Middleware logic
+│   ├── entity         # Database models
+│   ├── repositories   # Database queries
+│   ├── services       # Business logic layer
+├── pkg                # Utility packages
+├── .env               # Environment variables
 ├── docker-compose.yml # Docker configuration
+```
 
 
 
