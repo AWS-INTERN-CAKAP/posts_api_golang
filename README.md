@@ -1,22 +1,23 @@
 POST API GOLANG
 
-📌 Introduction
+# 📌 Introduction
 
 This project is built using Golang and containerized with Docker to ensure a seamless development and deployment experience. It includes user authentication, JWT-based security, PostgreSQL as the database, and follows a clean architecture pattern.
 
-📦 Prerequisites
+# 📦 Prerequisites
 
 Before running the project, make sure you have the following installed:
 
-Docker
+[Docker](https://www.docker.com/)
 
-Docker Compose
+[Golang](https://go.dev/doc/install)
 
-Golang
+[Migrate](https://github.com/golang-migrate/migrate) (Optional)
 
-🚀 Getting Started
+# 🚀 Getting Started
 
 1️⃣ Clone the repository
+
 ```bash
 git clone [ https://github.com/your-repo.git](https://github.com/AWS-INTERN-CAKAP/posts_api_golang.git)
 cd post_api_golang
@@ -57,12 +58,14 @@ This will start the application and the PostgreSQL database.
 
 If you want to run the application without Docker, follow these steps:
 
-``bash
+```bash
 go mod tidy
+migrate -path database/migration/ -database "postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable" -verbose up
 go run ./cmd/main.go
-``
+```
 
-🛠️ Project Structure
+# 🛠️ Project Structure
+
 ```bash
 ├── build
 │   ├── Dockerfile     # Dockerfile for app container
