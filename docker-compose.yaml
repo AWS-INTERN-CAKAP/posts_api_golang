@@ -1,0 +1,53 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: cakap
+      POSTGRES_PASSWORD: cakap123
+      POSTGRES_DB: post-db
+    networks:
+      - myapp-network
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+
+  migration:
+    build:
+      context: .
+      dockerfile: ./build/migrate.dockerfile
+    environment:
+      DATABASE_URL: postgres://cakap:cakap123@db:5432/post-db?sslmode=disable
+    command: ["-verbose", "up"]
+    depends_on:
+      - db
+    networks:
+      - myapp-network
+  myapp:
+    build:
+      context: .
+      dockerfile: ./build/dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      POSTGRES_USER: cakap
+      POSTGRES_PASSWORD: cakap123
+      POSTGRES_DATABASE: post-db
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432 
+      JWT_SECRET_KEY: secret
+    depends_on:
+      - db
+    networks:
+      - myapp-network
+
+networks:
+  myapp-network:
+    driver: bridge
+
+volumes:
+  db-data:
+

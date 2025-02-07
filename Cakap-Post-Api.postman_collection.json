@@ -1,0 +1,778 @@
+{
+	"info": {
+		"_postman_id": "d5795c4d-2914-4fe9-8f8c-b15aa56e2160",
+		"name": "Cakap-Post-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19993085"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"davidafdal7@gmail.com\",\r\n    \"password\": \"gelang123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/login"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"davidafdal7@gmail.com\",\r\n    \"password\": \"gelang123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:39:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "417"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success login\"\n    },\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3Mzg5Njk3NTd9.nBULWetjfxsEsfCE8BGn14OU_f2RfeorZd_74v53LtY\",\n        \"user\": {\n            \"id\": \"31b3d576-f6c3-4e92-b5d1-c3add3da053e\",\n            \"name\": \"david\",\n            \"email\": \"davidafdal7@gmail.com\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"david\",\r\n    \"email\": \"davidafdal7@gmail.com\",\r\n    \"password\": \"gelang123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/register"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"david\",\r\n    \"email\": \"davidafdal7@gmail.com\",\r\n    \"password\": \"gelang123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:39:04 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "160"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success register\"\n    },\n    \"data\": {\n        \"user\": {\n            \"id\": \"31b3d576-f6c3-4e92-b5d1-c3add3da053e\",\n            \"name\": \"david\",\n            \"email\": \"davidafdal7@gmail.com\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3Mzg5Njk3NTd9.nBULWetjfxsEsfCE8BGn14OU_f2RfeorZd_74v53LtY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/logout"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/logout"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:59:05 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"sukses logout\"\n    },\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3Mzg5Njk3NTd9.nBULWetjfxsEsfCE8BGn14OU_f2RfeorZd_74v53LtY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/profile"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/profile"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:31:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "360"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success get profile\"\n    },\n    \"data\": {\n        \"user\": {\n            \"id\": \"3c3eee1b-d054-4f5b-b1d3-75360dc42879\",\n            \"name\": \"david\",\n            \"email\": \"davidafdal7@gmail.com\",\n            \"posts\": [\n                {\n                    \"id\": \"8a230f86-5699-4573-b44b-a3dfaeb5644c\",\n                    \"title\": \"Sepak Bola\",\n                    \"content\": \"Sepak Bola\"\n                }\n            ],\n            \"categories\": [\n                {\n                    \"id\": \"0582c34e-e7fd-499e-b25b-2e1d8dd39411\",\n                    \"name\": \"Sports\",\n                    \"description\": \"oke\"\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/categories"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:33:16 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success get categories\"\n    },\n    \"data\": {\n        \"categories\": [\n            {\n                \"id\": \"0582c34e-e7fd-499e-b25b-2e1d8dd39411\",\n                \"name\": \"Sports\",\n                \"description\": \"oke\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Categoris",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3Mzg5Njk3NTd9.nBULWetjfxsEsfCE8BGn14OU_f2RfeorZd_74v53LtY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sports\",\r\n    \"description\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/categories"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Sports\",\r\n    \"description\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:41:09 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "157"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success create category\"\n    },\n    \"data\": {\n        \"category\": {\n            \"id\": \"69b77d09-27dd-40e2-bfc5-8f718d56387b\",\n            \"name\": \"Sports\",\n            \"description\": \"\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Categorie By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:41:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "165"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success get category\"\n    },\n    \"data\": {\n        \"category\": {\n            \"id\": \"69b77d09-27dd-40e2-bfc5-8f718d56387b\",\n            \"name\": \"Sports\",\n            \"description\": \"\",\n            \"posts\": []\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3Mzg5Njk3NTd9.nBULWetjfxsEsfCE8BGn14OU_f2RfeorZd_74v53LtY"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sports\",\r\n    \"description\": \"oke\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Sports\",\r\n    \"description\": \"oke\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:42:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "160"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success update category\"\n    },\n    \"data\": {\n        \"category\": {\n            \"id\": \"69b77d09-27dd-40e2-bfc5-8f718d56387b\",\n            \"name\": \"Sports\",\n            \"description\": \"oke\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3Mzg5Njk3NTd9.nBULWetjfxsEsfCE8BGn14OU_f2RfeorZd_74v53LtY"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:42:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success delete category\"\n    },\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3Mzg5Njk3NTd9.nBULWetjfxsEsfCE8BGn14OU_f2RfeorZd_74v53LtY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Sepak Bola\",\r\n    \"content\": \"Sepak Bola\",\r\n    \"category_id\": \"fa96720e-c73b-414a-b66c-6b5ab1f1a9d1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/posts"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Sepak Bola\",\r\n    \"content\": \"Sepak Bola\",\r\n    \"category_id\": \"fa96720e-c73b-414a-b66c-6b5ab1f1a9d1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/posts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:46:31 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "331"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success create post\"\n    },\n    \"data\": {\n        \"post\": {\n            \"id\": \"eeaf53f4-19ec-41c2-be9b-d89ea4d14609\",\n            \"title\": \"Sepak Bola\",\n            \"content\": \"Sepak Bola\",\n            \"category\": {\n                \"id\": \"fa96720e-c73b-414a-b66c-6b5ab1f1a9d1\",\n                \"name\": \"Sports\",\n                \"description\": \"\"\n            },\n            \"author\": {\n                \"id\": \"31b3d576-f6c3-4e92-b5d1-c3add3da053e\",\n                \"name\": \"david\",\n                \"email\": \"\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/posts"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/posts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:46:45 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "332"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success get posts\"\n    },\n    \"data\": {\n        \"posts\": [\n            {\n                \"id\": \"eeaf53f4-19ec-41c2-be9b-d89ea4d14609\",\n                \"title\": \"Sepak Bola\",\n                \"content\": \"Sepak Bola\",\n                \"category\": {\n                    \"id\": \"fa96720e-c73b-414a-b66c-6b5ab1f1a9d1\",\n                    \"name\": \"Sports\",\n                    \"description\": \"\"\n                },\n                \"author\": {\n                    \"id\": \"31b3d576-f6c3-4e92-b5d1-c3add3da053e\",\n                    \"name\": \"david\",\n                    \"email\": \"\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Post By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:47:06 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "328"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success get post\"\n    },\n    \"data\": {\n        \"post\": {\n            \"id\": \"eeaf53f4-19ec-41c2-be9b-d89ea4d14609\",\n            \"title\": \"Sepak Bola\",\n            \"content\": \"Sepak Bola\",\n            \"category\": {\n                \"id\": \"fa96720e-c73b-414a-b66c-6b5ab1f1a9d1\",\n                \"name\": \"Sports\",\n                \"description\": \"\"\n            },\n            \"author\": {\n                \"id\": \"31b3d576-f6c3-4e92-b5d1-c3add3da053e\",\n                \"name\": \"david\",\n                \"email\": \"\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3Mzg5Njk3NTd9.nBULWetjfxsEsfCE8BGn14OU_f2RfeorZd_74v53LtY"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Basket\",\r\n    \"content\": \"Sepak Bola\",\r\n    \"category_id\": \"fa96720e-c73b-414a-b66c-6b5ab1f1a9d1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Basket\",\r\n    \"content\": \"Sepak Bola\",\r\n    \"category_id\": \"fa96720e-c73b-414a-b66c-6b5ab1f1a9d1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:48:28 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "327"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success update post\"\n    },\n    \"data\": {\n        \"post\": {\n            \"id\": \"eeaf53f4-19ec-41c2-be9b-d89ea4d14609\",\n            \"title\": \"Basket\",\n            \"content\": \"Sepak Bola\",\n            \"category\": {\n                \"id\": \"fa96720e-c73b-414a-b66c-6b5ab1f1a9d1\",\n                \"name\": \"Sports\",\n                \"description\": \"\"\n            },\n            \"author\": {\n                \"id\": \"31b3d576-f6c3-4e92-b5d1-c3add3da053e\",\n                \"name\": \"david\",\n                \"email\": \"\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3Mzg5Njk3NTd9.nBULWetjfxsEsfCE8BGn14OU_f2RfeorZd_74v53LtY"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:49:06 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success delete post\"\n    },\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/users"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:43:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success get users\"\n    },\n    \"data\": {\n        \"users\": [\n            {\n                \"id\": \"31b3d576-f6c3-4e92-b5d1-c3add3da053e\",\n                \"name\": \"david\",\n                \"email\": \"davidafdal7@gmail.com\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/users/31b3d576-f6c3-4e92-b5d1-c3add3da053e"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/users/31b3d576-f6c3-4e92-b5d1-c3add3da053e"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Feb 2025 22:45:18 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"code\": 200,\n        \"message\": \"success get user\"\n    },\n    \"data\": {\n        \"user\": {\n            \"id\": \"31b3d576-f6c3-4e92-b5d1-c3add3da053e\",\n            \"name\": \"david\",\n            \"email\": \"davidafdal7@gmail.com\",\n            \"posts\": [],\n            \"categories\": []\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
