@@ -19,7 +19,7 @@ Before running the project, make sure you have the following installed:
 1️⃣ Clone the repository
 
 ```bash
-git clone [ https://github.com/your-repo.git](https://github.com/AWS-INTERN-CAKAP/posts_api_golang.git)
+git clone https://github.com/AWS-INTERN-CAKAP/posts_api_golang.git
 cd post_api_golang
 ```
 
