@@ -8,11 +8,11 @@ This project is built using Golang and containerized with Docker to ensure a sea
 
 Before running the project, make sure you have the following installed:
 
-[Docker](https://www.docker.com/)
+- [Docker](https://www.docker.com/)
 
-[Golang](https://go.dev/doc/install)
+- [Golang](https://go.dev/doc/install)
 
-[Migrate](https://github.com/golang-migrate/migrate) (Optional)
+- [Migrate](https://github.com/golang-migrate/migrate) (Optional)
 
 # 🚀 Getting Started
 
