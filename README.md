@@ -74,7 +74,6 @@ go run ./cmd/main.go
 ├── database/migration # Migration files
 ├── internal           # Core business logic
 │   ├── http           # HTTP handlers
-│   ├── middleware     # Middleware logic
 │   ├── entity         # Database models
 │   ├── repositories   # Database queries
 │   ├── services       # Business logic layer
