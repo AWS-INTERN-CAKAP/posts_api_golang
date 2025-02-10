@@ -15,7 +15,7 @@ func AppPublicRoutes(appHandler handler.AppHandler) []*route.Route {
 	return []*route.Route{
 		{
 			Method:  http.MethodPost,
-			Path:    "/login",
+			Path:    "login",
 			Handler: userHandler.Login,
 		},
 		{

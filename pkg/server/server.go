@@ -15,6 +15,7 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	echojwt "github.com/labstack/echo-jwt/v4"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 type Server struct {
@@ -24,11 +25,13 @@ type Server struct {
 func NewServer(publicRoutes, privateRoutes []*route.Route, secretKey string, tokenUse token.TokenUseCase) *Server {
 	e := echo.New()
 
+	e.Use(middleware.CORS())
+
 	e.GET("/", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, response.SuccessResponse(http.StatusOK, "Hello, World!", nil))
 	})
 
-	v1 := e.Group("api/v1")
+	v1 := e.Group("api")
 
 	if len(publicRoutes) > 0 {
 		for _, v := range publicRoutes {
