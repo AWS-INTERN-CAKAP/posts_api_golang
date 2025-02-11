@@ -4,6 +4,24 @@
 
 This project is built using Golang and containerized with Docker to ensure a seamless development and deployment experience. It includes user authentication, JWT-based security, PostgreSQL as the database, and follows a clean architecture pattern.
 
+# 🛠️ Project Structure
+
+```bash
+├── build
+│   ├── Dockerfile     # Dockerfile for app container
+├── cmd                # Application entry point
+├── config             # Configuration files
+├── database/migration # Migration files
+├── internal           # Core business logic
+│   ├── http           # HTTP handlers
+│   ├── entity         # Database models
+│   ├── repositories   # Database queries
+│   ├── services       # Business logic layer
+├── pkg                # Utility packages
+├── .env               # Environment variables
+├── docker-compose.yml # Docker configuration
+```
+
 # 📦 Prerequisites
 
 Before running the project, make sure you have the following installed:
@@ -64,23 +82,7 @@ migrate -path database/migration/ -database "postgresql://postgres:postgres@loca
 go run ./cmd/main.go
 ```
 
-# 🛠️ Project Structure
 
-```bash
-├── build
-│   ├── Dockerfile     # Dockerfile for app container
-├── cmd                # Application entry point
-├── config             # Configuration files
-├── database/migration # Migration files
-├── internal           # Core business logic
-│   ├── http           # HTTP handlers
-│   ├── entity         # Database models
-│   ├── repositories   # Database queries
-│   ├── services       # Business logic layer
-├── pkg                # Utility packages
-├── .env               # Environment variables
-├── docker-compose.yml # Docker configuration
-```
 
 
 
