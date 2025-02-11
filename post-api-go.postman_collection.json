@@ -23,7 +23,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/login"
+						"url": "http://localhost:8080/api/login"
 					},
 					"response": [
 						{
@@ -78,7 +78,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/register"
+						"url": "http://localhost:8080/api/register"
 					},
 					"response": [
 						{
@@ -130,7 +130,7 @@
 						},
 						"method": "POST",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/logout"
+						"url": "http://localhost:8080/api/logout"
 					},
 					"response": [
 						{
@@ -173,7 +173,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/profile"
+						"url": "http://localhost:8080/api/profile"
 					},
 					"response": [
 						{
@@ -215,7 +215,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/categories"
+						"url": "http://localhost:8080/api/categories"
 					},
 					"response": [
 						{
@@ -267,7 +267,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/categories"
+						"url": "http://localhost:8080/api/categories"
 					},
 					"response": [
 						{
@@ -313,7 +313,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
+						"url": "http://localhost:8080/api/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
 					},
 					"response": [
 						{
@@ -365,7 +365,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
+						"url": "http://localhost:8080/api/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
 					},
 					"response": [
 						{
@@ -417,7 +417,7 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
+						"url": "http://localhost:8080/api/categories/69b77d09-27dd-40e2-bfc5-8f718d56387b"
 					},
 					"response": [
 						{
@@ -460,7 +460,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3Mzg5Njk3NTd9.nBULWetjfxsEsfCE8BGn14OU_f2RfeorZd_74v53LtY"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMxYjNkNTc2LWY2YzMtNGU5Mi1iNWQxLWMzYWRkM2RhMDUzZSIsImVtYWlsIjoiZGF2aWRhZmRhbDdAZ21haWwuY29tIiwibmFtYSI6ImRhdmlkIiwiaXNzIjoicG9zdC1hcGkiLCJleHAiOjE3MzkxODAwOTB9.vR7Mk32MmDNAI_fxT_B5u_SZeTJNYoEx7EbUpVN_YEg"
 							}
 						},
 						"method": "POST",
@@ -474,7 +474,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/posts"
+						"url": "http://localhost:8080/api/posts"
 					},
 					"response": [
 						{
@@ -520,7 +520,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/posts"
+						"url": "http://localhost:8080/api/posts"
 					},
 					"response": [
 						{
@@ -557,7 +557,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
+						"url": "http://localhost:8080/api/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
 					},
 					"response": [
 						{
@@ -609,7 +609,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
+						"url": "http://localhost:8080/api/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
 					},
 					"response": [
 						{
@@ -661,7 +661,7 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
+						"url": "http://localhost:8080/api/posts/eeaf53f4-19ec-41c2-be9b-d89ea4d14609"
 					},
 					"response": [
 						{
@@ -703,7 +703,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/users"
+						"url": "http://localhost:8080/api/users"
 					},
 					"response": [
 						{
@@ -740,7 +740,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/users/31b3d576-f6c3-4e92-b5d1-c3add3da053e"
+						"url": "http://localhost:8080/api/users/31b3d576-f6c3-4e92-b5d1-c3add3da053e"
 					},
 					"response": [
 						{
