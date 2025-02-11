@@ -4,6 +4,16 @@
 
 This project is built using Golang and containerized with Docker to ensure a seamless development and deployment experience. It includes user authentication, JWT-based security, PostgreSQL as the database, and follows a clean architecture pattern.
 
+# 📦 Prerequisites
+
+Before running the project, make sure you have the following installed:
+
+- [Docker](https://www.docker.com/)
+
+- [Golang](https://go.dev/doc/install)
+
+- [Migrate](https://github.com/golang-migrate/migrate) (Optional)
+
 # 🛠️ Project Structure
 
 ```bash
@@ -21,16 +31,6 @@ This project is built using Golang and containerized with Docker to ensure a sea
 ├── .env               # Environment variables
 ├── docker-compose.yml # Docker configuration
 ```
-
-# 📦 Prerequisites
-
-Before running the project, make sure you have the following installed:
-
-- [Docker](https://www.docker.com/)
-
-- [Golang](https://go.dev/doc/install)
-
-- [Migrate](https://github.com/golang-migrate/migrate) (Optional)
 
 # 🚀 Getting Started
 
