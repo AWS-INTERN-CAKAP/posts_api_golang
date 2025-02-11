@@ -3,6 +3,7 @@ version: "3"
 services:
   db:
     image: postgres
+    container_name: db_container
     environment:
       POSTGRES_USER: cakap
       POSTGRES_PASSWORD: cakap123
@@ -13,12 +14,11 @@ services:
       - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
-
-
   migration:
     build:
       context: .
       dockerfile: ./build/migrate.dockerfile
+    container_name: migration_container
     environment:
       DATABASE_URL: postgres://cakap:cakap123@db:5432/post-db?sslmode=disable
     command: ["-verbose", "up"]
@@ -26,12 +26,14 @@ services:
       - db
     networks:
       - myapp-network
+
   myapp:
     build:
       context: .
       dockerfile: ./build/dockerfile
     ports:
       - "8080:8080"
+    container_name: myapp_container
     environment:
       POSTGRES_USER: cakap
       POSTGRES_PASSWORD: cakap123
@@ -44,10 +46,25 @@ services:
     networks:
       - myapp-network
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - "8888:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: gelang123
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    networks:
+      - myapp-network
+
 networks:
   myapp-network:
     driver: bridge
 
 volumes:
   db-data:
+  pgadmin-data:
 
